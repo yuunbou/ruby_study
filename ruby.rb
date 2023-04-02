@@ -1,18 +1,14 @@
-User = "太郎"
-puts User
+#　文字列
+'1'.to_s 
 
-rubystudy = "Rubyの学習"
-puts rubystudy
+# 数値
+1.to_s
 
-puts 100
-puts 10 + 3  # 足し算
-puts 10 - 3  # 引き算
-puts 10 * 3  # 掛け算
-puts 90 / 3  # 割り算
-puts 100 % 3  # 割り算の余り
+# nil
+true.to_s
 
-name = "太郎"
-weight = 50
+# false
+false.to_s
 
-# to_sは整数を文字列型へ変換する
-puts name + "さんの体重は" + weight.to_s + "kgです"  #
+# 正規表現
+/\d+/.to_s
