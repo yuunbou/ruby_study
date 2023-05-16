@@ -1,8 +1,10 @@
-# ％記法
+# ヒアドキュメント
 
-puts %q!こんにちは、初めまして!
+def some_method
+  <<~TEXT
+    \ これはヒアドキュメントです
+    \ この時行頭はバックスラッシュでしてします。
+  TEXT
+end
 
-puts %Q!こんにちは,\n初めまして!
-
-puts %!おはようございます!
-
+puts some_method
