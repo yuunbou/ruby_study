@@ -1,10 +1,8 @@
 # ヒアドキュメント
 
-def some_method
-  <<~TEXT
-    \ これはヒアドキュメントです
-    \ この時行頭はバックスラッシュでしてします。
-  TEXT
-end
+name = "太郎"
+a = <<"TEXT"
+ようこそ#{name}さん！
+TEXT
 
-puts some_method
+puts a
