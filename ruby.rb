@@ -1,26 +1,7 @@
-# case文
+# 条件演算子（三項演算子）
+# RubyではC言語と同じような? :を使った条件分技（三項演算子）を使うことができます。
 
-country = 'italy'
-# if文
-# if country == 'japan'
-#   puts 'こんにちは'
-# elsif country == 'us'
-#   puts 'Hello'
-# elsif country == 'italy'
-#   puts 'Ciao'
-# else
-#   puts '???'
-# end
+n = 11
 
-
-# case文
-case country
-when 'Japan'
-  puts 'こんにちは'
-when 'us'
-  puts 'Hello'
-when 'italy'
-  puts 'Ciao'
-else
-  puts '???'
-end
+message = n > 10 ? '10より大きい' : '10以下'
+puts message
