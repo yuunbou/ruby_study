@@ -1,7 +1,11 @@
-# 条件演算子（三項演算子）
-# RubyではC言語と同じような? :を使った条件分技（三項演算子）を使うことができます。
+# デフォルト値付きの引数
+def greet(country = 'japan')
+  if country == 'japan'
+    puts 'こんにちは'
+  else
+    puts 'Hello'
+  end
+end
 
-n = 11
-
-message = n > 10 ? '10より大きい' : '10以下'
-puts message
+greet
+greet('us')
