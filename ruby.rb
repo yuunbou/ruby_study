@@ -1,30 +1,26 @@
-# 引数の内容を変更しない安全バージョン
+# エンドレスメソッド定義（1行メソッド定義）
 
-def reverse_upcase(s)
-  s.reverse.upcase
+# 通常のメソッド定義
+def greet
+  'Hello!'
 end
 
-# 引数の内容を破壊的に変更してしまう危険バージョン
-def reverse_upcase!(s)
-  s.reverse!
-  s.upcase!
+# エンドレスメソッド定義(＝に続けて処理や戻り値を書く)
+def greet = 'Hello!'
+  
+# 呼び出し方はどちらも同じ
+puts greet
+
+# 通常のメソッド定義（引数を持つ場合）
+def add(a, b)
+  a + b
 end
 
-s = 'ruby'
+# エンドレスメソッド定義
+def add(a, b) = a + b
 
-# 安全バージョンは引数として渡した変数sの内容はそのまま
-puts reverse_upcase(s)
-puts s
+puts add(1, 2)
 
-# 危険バージョンは引数として渡した変数sの内容が変更される
-puts reverse_upcase!(s)
-puts s
 
-# 構文エラー
-odd? = 1.odd?
 
-puts odd?
-
-upcase! = 'ruby'.upcase!
-
-puts upcase!
+  
