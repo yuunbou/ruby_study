@@ -1,20 +1,11 @@
-# デフォルト値付きの引数
-def default_args(a, b, c = 0, d = 0)
-  puts "a=#{a}, b=#{b}, c=#{c}, d=#{d}"
-end
+# !で終わるメソッド
 
-default_args(1, 2)
-default_args(1, 2, 3)
-default_args(1, 2, 3, 4)
+a = 'ruby'
 
-# システム日時や他のメソッドの戻り値をデフォルト値に指定する
+#upcaseだと変数aの値は変化しない
+puts a.upcase
+puts a
 
-def foo(time = Time.now, message = bar)
-  puts "time: #{time}, message: #{message}"
-end
-
-def bar
-  'BAR'
-end
-
-foo
+#upcase!だと変数aの値も大文字に変わる
+puts a.upcase!
+puts a
