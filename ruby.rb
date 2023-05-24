@@ -1,11 +1,30 @@
-# !で終わるメソッド
+# 引数の内容を変更しない安全バージョン
 
-a = 'ruby'
+def reverse_upcase(s)
+  s.reverse.upcase
+end
 
-#upcaseだと変数aの値は変化しない
-puts a.upcase
-puts a
+# 引数の内容を破壊的に変更してしまう危険バージョン
+def reverse_upcase!(s)
+  s.reverse!
+  s.upcase!
+end
 
-#upcase!だと変数aの値も大文字に変わる
-puts a.upcase!
-puts a
+s = 'ruby'
+
+# 安全バージョンは引数として渡した変数sの内容はそのまま
+puts reverse_upcase(s)
+puts s
+
+# 危険バージョンは引数として渡した変数sの内容が変更される
+puts reverse_upcase!(s)
+puts s
+
+# 構文エラー
+odd? = 1.odd?
+
+puts odd?
+
+upcase! = 'ruby'.upcase!
+
+puts upcase!
