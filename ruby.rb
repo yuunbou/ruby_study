@@ -1,26 +1,23 @@
-# エンドレスメソッド定義（1行メソッド定義）
+# エイリアスメソッド
+# lengthもsizeも、どちらも文字数を返す
+puts 'hello'.length
 
-# 通常のメソッド定義
-def greet
-  'Hello!'
-end
+puts 'hello'.size
 
-# エンドレスメソッド定義(＝に続けて処理や戻り値を書く)
-def greet = 'Hello!'
-  
-# 呼び出し方はどちらも同じ
-puts greet
+# 式（Expression)と文(Statement)
 
-# 通常のメソッド定義（引数を持つ場合）
-def add(a, b)
-  a + b
-end
+# if文が値を返すので変数に代入できる
 
-# エンドレスメソッド定義
-def add(a, b) = a + b
+a = 
+  if true
+    '真です'
+  else
+    '偽です'
+  end
+p a
 
-puts add(1, 2)
-
+# メソッドの定義も実は値（シンボル）を返している
+b = def foo; end
+p b
 
 
-  
