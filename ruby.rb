@@ -1,23 +1,19 @@
-# エイリアスメソッド
-# lengthもsizeも、どちらも文字数を返す
-puts 'hello'.length
+# aとbはどちらも同じ文字列だが、オブジェクトとしては別物
+a = 'hello'
+b = 'hello'
+puts a.object_id
+puts b.object_id
 
-puts 'hello'.size
+#cにbを代入する。bとcはどちらも同じオブジェクト
+c = b
+puts c.object_id
 
-# 式（Expression)と文(Statement)
+# メソッドの引数にcを渡す。引数として受け取ったdはb、cと同じオブジェクトを参照している
+def m(d)
+  d.object_id
+end
+puts m(c)
 
-# if文が値を返すので変数に代入できる
-
-a = 
-  if true
-    '真です'
-  else
-    '偽です'
-  end
-p a
-
-# メソッドの定義も実は値（シンボル）を返している
-b = def foo; end
-p b
-
-
+# ewual?メソッドを使って同じオブジェクトかどうか確認しても良い
+puts a.equal?(b)
+puts b.equal?(c)
