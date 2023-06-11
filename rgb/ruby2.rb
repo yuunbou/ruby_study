@@ -1,6 +1,6 @@
-#  配列
+#  要素の変更、追加、削除
 
-fruits = ['apple', 'orange', 'melon']
-
-puts fruits
+a = [1, 2, 3]
+a[1] = 20
+puts a
 
